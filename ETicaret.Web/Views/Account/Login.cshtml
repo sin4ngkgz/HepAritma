@@ -1,0 +1,18 @@
+﻿<title>Giriş Yap</title>
+@if(!string.IsNullOrEmpty(ViewBag.LoginError))
+{
+    <div class="alert alert-danger"role="alert">@ViewBag.LoginError</div>
+}
+
+@using (Html.BeginForm("GirisYap","Account"))
+{   
+  <div class="mt-5 mb-3">
+      <label for="inputEmail" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" name="Email">
+  </div>
+  <div class="mb-3">
+      <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Şifrenizi Girin" name="Password">
+  </div>
+    <button type="submit" class="btn btn-outline-primary">Giriş Yap</button>
+}

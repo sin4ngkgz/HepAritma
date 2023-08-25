@@ -1,0 +1,30 @@
+﻿<title>Üye Ol</title>
+@if (!string.IsNullOrEmpty(ViewBag.SignUpError))
+{
+    <div class="alert alert-danger" role="alert">@ViewBag.SignUpError</div>
+}
+
+@using (Html.BeginForm("Kaydol", "Account"))
+{
+    <div class="mt-5 mb-3">
+        <label for="inputFirstName" class="form-label">Ad</label>
+        <input type="text" class="form-control" id="inputFirstName" name="FirstName">
+    </div>
+    <div class="mb-3">
+        <label for="inputLastName" class="form-label">Soyad</label>
+        <input type="text" class="form-control" id="inputLastName" name="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="inputPhoneNumber" class="form-label">Telefon Numarası</label>
+        <input type="text" class="form-control" id="inputPhoneNumber" placeholder="0555 555 55 55" name="PhoneNumber">
+    </div>
+    <div class="mb-3">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" name="Email">
+    </div>
+    <div class="mb-3">
+        <label for="inputPassword" class="form-label">Şifre</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Şifrenizi Girin" name="Password">
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Üye Ol</button>
+}

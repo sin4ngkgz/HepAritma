@@ -1,0 +1,41 @@
+﻿
+<h3>Ürünleri Düzenle</h3>
+
+<div id="divProducts">
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="NewProduct()">
+    Yeni Ürün Ekle
+</button>
+
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ürün Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label for="inputProductName" class="form-label">Ürün Adı</label>
+                <input type="text" id="inputProductName" class="form-control">
+
+                <label for="inputDescription" class="mt-2">Ürün Açıklaması</label>
+                <input type="text" id="inputDescription" class="form-control">
+
+                <label for="inputTitle" class="mt-2">Ürün Başlığı</label>
+                <input type="text" id="inputTitle" class="form-control">
+
+                <label for="inputPrice" class="mt-2">Ürün Fiyatı</label>
+                <input type="text" id="inputPrice" class="form-control">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="SaveProduct()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/admin/product.js"></script>

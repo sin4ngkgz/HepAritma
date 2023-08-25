@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+  
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar-brand-centered {
+    position: absolute;
+    left:calc(50% - 150px);
+    display: block;
+    text-align: center;
+    background-color: transparent;
+}
+
+.category-centered {
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+

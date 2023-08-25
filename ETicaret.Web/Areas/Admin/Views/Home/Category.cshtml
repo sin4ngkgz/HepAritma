@@ -1,0 +1,45 @@
+﻿
+<h3>Kategorileri Düzenle</h3>
+
+<div id="divCategories">
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick="NewCategory()">
+    Yeni Kategori Ekle
+</button>
+
+
+<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Kategori Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label for="inputCategoryName" class="form-label">Kategori Adı</label>
+                <input type="text" id="inputCategoryName" class="form-control">
+
+                <label for="selectTopCategories" class="form-label">Üst Kategori</label>
+                <select type="text" id="selectTopCategories" class="form-control"></select>
+
+                <label for="inputPlace" class="form-label">Sıra</label>
+                <input type="text" id="inputPlace" class="form-control"/>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="inputAktifMi"/>
+                    <label class="form-check-label" for="inputAktifMi">
+                        Aktif
+                    </label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="SaveCategory()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/admin/category.js"></script>

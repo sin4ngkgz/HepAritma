@@ -1,0 +1,109 @@
+﻿<h3>Kullanıcıları Düzenle</h3>
+
+<div id="divUsers">
+</div>
+
+<button type="button" class="btn btn-primary me-auto" data-bs-toggle="modal" onclick="SignUp()">
+    Yeni Kullanıcı
+</button>
+
+@* KullanıcıModal *@
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Kullanıcı Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <label for="inputFirstName" class="form-label">Ad</label>
+                <input type="text" id="inputFirstName" class="form-control">
+
+                <label for="inputLastName" class="form-label">Soyad</label>
+                <input type="text" id="inputLastName" class="form-control">
+
+                <label for="inputPhoneNumber" class="form-label">Telefon Numarası</label>
+                <input type="text" id="inputPhoneNumber" class="form-control">
+
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="text" id="inputEmail" class="form-control">
+
+                <label for="inputPassword" class="form-label">Şifre</label>
+                <input type="text" id="inputPassword" class="form-control">
+
+            </div>
+           
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="SaveUser()">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* AdresModal *@
+<div class="modal fade modal-xl" id="addressModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Adres Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body" id="divAddressList"> 
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary me-auto" data-bs-toggle="modal" onclick="NewAddress()">
+                    Yeni Adres Ekle
+                </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+@* AddressEdit *@
+<div class="modal modal-lg fade" id="addressEditModal" tabindex="-1" aria-labelledby="addressEditModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="addressEditModalLabel">Adres Bilgileri</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="inputFirstName" class="form-label">Ad</label>
+                <input type="text" id="inputFirstName" class="form-control">
+
+                <label for="inputLastName" class="form-label">Soyad</label>
+                <input type="text" id="inputLastName" class="form-control">
+
+                <label for="inputAddressName" class="form-label">Adres Adı</label>
+                <input type="text" id="inputAddressName" class="form-control">
+
+                <label for="inputDescription" class="form-label">Adres Açıklaması</label>
+                <input type="text" id="inputDescription" class="form-control">
+
+                <label for="selectCity" class="form-label">Şehir</label>
+                <select type="text" id="selectCity" class="form-control"></select>
+
+                <label for="selectCountry" class="form-label">Ülke</label>
+                <select type="text" id="selectCountry" class="form-control"></select>
+
+                <label for="selectDistrict" class="form-label">İlçe</label>
+                <select type="text" id="selectDistrict" class="form-control"></select>
+
+                <label for="inputZipCode" class="form-label">Posta Kodu</label>
+                <input type="text" id="inputZipCode" class="form-control">
+
+            </div>
+            <div class="modal-footer">
+              
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vazgeç</button>
+                <button type="button" class="btn btn-primary" onclick="SaveAddress()">Kaydet</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/admin/customer.js"></script>
